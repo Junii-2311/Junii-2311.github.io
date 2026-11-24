@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Junaid Zaheer — Resume</title>
+<style>
+  @page { size: A4; margin: 0; }
+  :root {
+    --ink: #1d2126;
+    --text: #2b3036;
+    --muted: #5b6570;
+    --sep: #b9c2cc;
+    --accent: #1f4e79;
+    --date: #4b5e72;
+    --rule: #c9d3de;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #fff; }
+  body {
+    font-family: Calibri, Carlito, "Segoe UI", Arial, sans-serif;
+    font-size: 10.2pt;
+    line-height: 1.23;
+    color: var(--text);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page { width: 210mm; min-height: 297mm; padding: 10mm 13mm 7mm; }
+  a { color: inherit; text-decoration: none; }
+  a.lnk { color: var(--accent); }
+
+  /* Header */
+  h1 { font-size: 25pt; font-weight: 700; color: var(--ink); line-height: 1.05; letter-spacing: -0.2pt; }
+  .title { font-size: 12pt; font-weight: 700; color: var(--accent); margin-top: 3pt; }
+  .contact { color: var(--text); margin-top: 2pt; font-size: 10pt; }
+  .contact .s { color: var(--sep); padding: 0 4pt; }
+
+  /* Sections */
+  h2 {
+    font-size: 11pt; font-weight: 700; color: var(--accent); text-transform: uppercase;
+    letter-spacing: 0.2pt; margin-top: 7.5pt; padding-bottom: 1.5pt;
+    border-bottom: 1pt solid var(--rule); margin-bottom: 3pt;
+  }
+  p { margin: 0; }
+  .skills div { margin-bottom: 1pt; }
+  .skills b { color: var(--ink); }
+
+  /* Entries */
+  .entry { margin-top: 3pt; }
+  .entry:first-of-type { margin-top: 0; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 10pt; }
+  .row .l b { color: var(--ink); }
+  .row .l .s { color: var(--sep); padding: 0 4pt; }
+  .row .r { font-weight: 700; color: var(--date); white-space: nowrap; }
+  .sub { color: var(--text); }
+
+  ul { list-style: none; margin-top: 1pt; }
+  li { position: relative; padding-left: 13pt; margin-bottom: 0.5pt; }
+  li::before {
+    content: ""; position: absolute; left: 4pt; top: 0.52em;
+    width: 3.6pt; height: 3.6pt; border-radius: 50%; background: var(--accent);
+  }
+  li b { color: var(--ink); }
+  li i { color: var(--text); }
+  .certs { display: grid; grid-template-columns: max-content max-content; column-gap: 30pt; }
+  .certs li .s { color: var(--sep); padding: 0 4pt; }
+
+  @media screen {
+    body { background: #e9ecef; }
+    .page { margin: 24px auto; background: #fff; box-shadow: 0 2px 14px rgba(0,0,0,.12); }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1>Junaid Zaheer</h1>
+    <div class="title">Associate Software Engineer | AI/ML Engineering</div>
+    <div class="contact">
+      Lahore, Pakistan<span class="s">|</span>+92 310 4278513<span class="s">|</span><a href="mailto:junaidzaheer2311@gmail.com">junaidzaheer2311@gmail.com</a>
+    </div>
+    <div class="contact">
+      <a href="https://linkedin.com/in/junaid-zaheer">linkedin.com/in/junaid-zaheer</a><span class="s">|</span><a href="https://github.com/Junii-2311">github.com/Junii-2311</a>
+    </div>
+  </header>
+
+  <h2>Summary</h2>
+  <p>AI/ML Engineer with hands-on production experience building LLM-powered systems, predictive models and intelligent
+  data pipelines. At Bookme.pk, deployed open-weight LLMs (Gemma, Qwen) on local GPU infrastructure using vLLM, built a
+  production RAG assistant, and developed flight price prediction models trained on 47,000+ real flight legs. Proficient in
+  Python, PyTorch, TensorFlow, scikit-learn, Hugging Face, FastAPI, RAG and Linux-based model deployment.</p>
+
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <div><b>Machine Learning:</b> PyTorch, TensorFlow, scikit-learn, NumPy, Pandas, Supervised &amp; Unsupervised Learning, Feature Engineering, Model Training, Evaluation &amp; Tuning (Accuracy, F1, AUC, Confusion Matrix)</div>
+    <div><b>Generative AI &amp; LLMs:</b> LLMs, RAG, Embeddings, BGE-M3, Hugging Face (transformers), Prompt Engineering, Agentic AI, Structured Outputs, vLLM, OpenAI API, Anthropic API</div>
+    <div><b>Backend &amp; Data:</b> FastAPI, Flask, Pydantic, REST APIs, PostgreSQL, ClickHouse, Data Pipelines, Web Scraping, SQL</div>
+    <div><b>Deployment &amp; Tools:</b> Linux, Docker, Nginx, systemd, Git, GitHub Actions, pytest, Playwright, Postman</div>
+    <div><b>Languages:</b> Python, SQL, JavaScript, TypeScript, Bash, C/C++</div>
+  </div>
+
+  <h2>Experience</h2>
+  <div class="entry">
+    <div class="row"><span class="l"><b>AI Engineer</b><span class="s">|</span>Bookme.pk, Lahore</span><span class="r">Jul 2026 – Present</span></div>
+    <ul>
+      <li>Deployed open-weight LLMs (Gemma, Qwen) on local GPU infrastructure using vLLM and exposed inference through OpenAI-compatible REST APIs for internal AI applications.</li>
+      <li>Built Bookie, a production RAG assistant using BGE-M3 embeddings and company-specific content, enabling conversational internal information retrieval across teams.</li>
+      <li>Developed and evaluated flight price direction and delay prediction models on 47,000+ historical flight records; applied feature engineering and assessed classification performance using accuracy, F1-score and confusion matrix analysis.</li>
+      <li>Designed a ClickHouse-based customer behaviour intelligence architecture for semantic retrieval and agentic AI workflows, integrating BGE-M3 embedding models.</li>
+      <li>Built scheduled Python data pipelines for flight and motorway status collection, integrating PostgreSQL, REST APIs and Linux systemd-based task scheduling.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span class="l"><b>Software Engineer – Python &amp; AI (Contract)</b><span class="s">|</span>HomeEasy, Remote</span><span class="r">Apr 2025 – Jul 2025</span></div>
+    <ul>
+      <li>Developed asynchronous Python/FastAPI automation services integrating OpenAI and Anthropic APIs to process lead data at scale.</li>
+      <li>Built Streamlit monitoring dashboards, Playwright-based automated test suites and GitHub Actions CI/CD pipelines, reducing manual QA effort by 40%.</li>
+    </ul>
+  </div>
+
+  <h2>Projects</h2>
+  <ul>
+    <li><b>AI Scrum Meeting Automation</b> <i>(Python, Speech-to-Text, Speaker Diarization, LLM APIs, Linux)</i>: production AI workflow for scrum automation with audio transcription, speaker diarization, LLM-based structured meeting summaries and employee-specific update generation. Currently in active use.</li>
+    <li><b>PPG Signal Analysis for Glucose Estimation</b>, Final Year Project <i>(Python, TensorFlow, Signal Processing, Feature Engineering)</i>: TensorFlow regression model that estimates blood glucose from PPG physiological signals, with time-series preprocessing, feature extraction, model evaluation and predictions served through a cloud-connected backend API.</li>
+  </ul>
+
+  <h2>Education</h2>
+  <div class="entry">
+    <div class="row"><span class="l"><b>B.S. in Computer Engineering</b></span><span class="r">2022 – 2026</span></div>
+    <div class="sub">COMSATS University Islamabad, Lahore Campus</div>
+  </div>
+
+  <h2>Certifications</h2>
+  <ul class="certs">
+    <li>Agent Skills with Anthropic<span class="s">|</span>DeepLearning.AI</li>
+    <li>ChatGPT Prompt Engineering for Developers<span class="s">|</span>DeepLearning.AI</li>
+    <li>Python &amp; AI Development<span class="s">|</span>PureLogics</li>
+    <li>Certified Ethical Hacker (CEH)<span class="s">|</span>EC-Council</li>
+    <li>Introduction to Cybersecurity<span class="s">|</span>Cisco</li>
+  </ul>
+
+  <h2>Leadership</h2>
+  <ul>
+    <li><b>President &amp; Founder</b>, ACE (Ambassadors of Computer Engineering), COMSATS Lahore: founded and led a 100+ member engineering society; organised technical workshops and mentored junior engineers.</li>
+  </ul>
+
+</div>
+</body>
+</html>

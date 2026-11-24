@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Junaid Zaheer — AI / ML Engineer</title>
+<meta name="description" content="Junaid Zaheer, AI/ML engineer in Lahore. Self-hosted LLMs, RAG assistants, predictive ML and data pipelines.">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23ff2d2d'/%3E%3Ctext x='32' y='42' font-family='monospace' font-weight='700' font-size='26' text-anchor='middle' fill='white'%3EJZ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>
+  // Start the swarm build before first paint, so the finished page never flashes first.
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('swarm-on', 'draft');
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav" data-layer="fill">
+  <a class="nav-mark" href="#top" aria-label="Back to top">JZ</a>
+  <a class="nav-cv" href="assets/Junaid-Zaheer-Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+  <button class="nav-menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="menuPanel">Menu</button>
+  <nav class="menu-panel" id="menuPanel" aria-label="Sections" hidden>
+    <a href="#about"><span>01</span>About</a>
+    <a href="#stack"><span>02</span>Stack</a>
+    <a href="#systems"><span>03</span>Systems</a>
+    <a href="#lab"><span>04</span>Projects</a>
+    <a href="#log"><span>05</span>Experience</a>
+    <a href="#contact"><span>06</span>Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero wrap" id="top">
+  <div class="giant-wrap" data-layer><p class="giant" aria-hidden="true">PORTFOLIO</p></div>
+
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="hello" data-layer="type">Hello, I'm</p>
+      <h1 class="name" data-layer="fill"><span>JUNAID.</span></h1>
+      <p class="role" data-layer="type"><i class="sq"></i>AI/ML Engineer · LLMs · RAG · Predictive ML · Pipelines</p>
+      <p class="lead" data-layer="type">I build <strong>production LLM systems</strong> (self-hosted models, RAG assistants)
+        and <strong>predictive models</strong> on real travel data, plus the pipelines that keep them fed.</p>
+      <div class="cta" data-layer>
+        <a class="btn btn-red" href="#systems">Inspect the systems →</a>
+        <a class="btn" href="#contact">Open a channel</a>
+        <a class="btn" href="assets/Junaid-Zaheer-Resume.pdf" target="_blank" rel="noopener">View résumé ↗</a>
+      </div>
+      <dl class="stats">
+        <div data-layer><dt>47K+</dt><dd>flight records<br>modelled</dd></div>
+        <div data-layer><dt>04</dt><dd>live demos<br>on this page</dd></div>
+        <div data-layer><dt>40%</dt><dd>less manual QA<br>at HomeEasy</dd></div>
+      </dl>
+    </div>
+
+    <figure class="portrait" data-layer="image">
+      <img src="assets/portrait.webp" alt="Junaid Zaheer" width="600" height="600">
+      <figcaption class="status"><i></i>vLLM serving · online</figcaption>
+    </figure>
+  </div>
+
+  <div class="pillars">
+    <article class="pillar" data-layer="fill">
+      <p class="pillar-top"><span>01.</span><span>Serving</span></p>
+      <h3>Self-hosted open-weight LLMs</h3>
+      <p>vLLM · Gemma · Qwen · OpenAI-compatible APIs</p>
+    </article>
+    <article class="pillar" data-layer="fill">
+      <p class="pillar-top"><span>02.</span><span>Retrieval</span></p>
+      <h3>RAG &amp; embedding search</h3>
+      <p>BGE-M3 · embeddings · ClickHouse</p>
+    </article>
+    <article class="pillar" data-layer="fill">
+      <p class="pillar-top"><span>03.</span><span>Prediction</span></p>
+      <h3>Predictive ML on travel data</h3>
+      <p>scikit-learn · PyTorch · 47K+ flight legs</p>
+    </article>
+  </div>
+
+  <ul class="socials" data-layer>
+    <li><a href="https://github.com/Junii-2311" target="_blank" rel="noopener">GitHub ↗</a></li>
+    <li><a href="https://linkedin.com/in/junaid-zaheer" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+    <li><a href="mailto:junaidzaheer2311@gmail.com">Email ↗</a></li>
+  </ul>
+</section>
+
+<!-- ============ 01 ABOUT ============ -->
+<section class="sec wrap" id="about">
+  <div class="sec-label" data-layer><span><b>// 01.00</b> SEC_ABOUT</span><span>INDEX [01 / 06]</span></div>
+  <p class="kicker" data-layer="type">Engineer profile</p>
+  <h2 data-layer="type">Background &amp; Philosophy</h2>
+  <div class="about-grid">
+    <div class="about-copy">
+      <p data-layer="type">AI Engineer at <strong>Bookme.pk</strong>, Lahore. Before that, a contract Python &amp; AI engineer at
+        <strong>HomeEasy</strong>, and a <strong>B.S. in Computer Engineering</strong> at COMSATS Lahore, where I founded ACE,
+        a 100+ member engineering society.</p>
+      <blockquote data-layer="type">A model only matters once it's served, measured and trusted. That part is my job.</blockquote>
+    </div>
+    <div class="about-cards">
+      <div class="info-card" data-layer="fill">
+        <p class="info-label">Currently</p>
+        <p class="info-title">AI Engineer · Bookme.pk</p>
+        <p class="info-meta">Lahore · since Jul 2026</p>
+      </div>
+      <div class="info-card" data-layer="fill">
+        <p class="info-label">Education</p>
+        <p class="info-title">B.S. Computer Engineering</p>
+        <p class="info-meta">COMSATS University Islamabad, Lahore · 2022–26</p>
+      </div>
+      <div class="info-card" data-layer="fill">
+        <p class="info-label">Certifications</p>
+        <ul class="certs">
+          <li>Agent Skills with Anthropic <span>DeepLearning.AI</span></li>
+          <li>ChatGPT Prompt Engineering for Developers <span>DeepLearning.AI</span></li>
+          <li>Python &amp; AI Development <span>PureLogics</span></li>
+          <li>Certified Ethical Hacker (CEH) <span>EC-Council</span></li>
+          <li>Introduction to Cybersecurity <span>Cisco</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 STACK ============ -->
+<section class="sec wrap" id="stack">
+  <div class="sec-label" data-layer><span><b>// 02.00</b> SEC_STACK</span><span>INDEX [02 / 06]</span></div>
+  <p class="kicker" data-layer="type">Toolchain</p>
+  <h2 data-layer="type">The stack I ship with</h2>
+  <div class="stack-grid">
+    <div class="stack-card" data-layer="fill"><h3><span>A /</span>Generative AI &amp; LLMs</h3>
+      <ul class="chips"><li>LLMs</li><li>RAG</li><li>Embeddings</li><li>BGE-M3</li><li>Hugging Face</li><li>vLLM</li><li>Prompt engineering</li><li>Agentic AI</li><li>Structured outputs</li><li>OpenAI API</li><li>Anthropic API</li></ul></div>
+    <div class="stack-card" data-layer="fill"><h3><span>B /</span>Machine Learning</h3>
+      <ul class="chips"><li>PyTorch</li><li>TensorFlow</li><li>scikit-learn</li><li>NumPy</li><li>Pandas</li><li>Feature engineering</li><li>Model evaluation</li><li>F1 / AUC</li></ul></div>
+    <div class="stack-card" data-layer="fill"><h3><span>C /</span>Backend &amp; Data</h3>
+      <ul class="chips"><li>FastAPI</li><li>Flask</li><li>Pydantic</li><li>REST APIs</li><li>PostgreSQL</li><li>ClickHouse</li><li>Data pipelines</li><li>Web scraping</li><li>SQL</li></ul></div>
+    <div class="stack-card" data-layer="fill"><h3><span>D /</span>Deployment &amp; Languages</h3>
+      <ul class="chips"><li>Linux</li><li>Docker</li><li>Nginx</li><li>systemd</li><li>GitHub Actions</li><li>pytest</li><li>Playwright</li><li>Python</li><li>TypeScript</li><li>Bash</li><li>C / C++</li></ul></div>
+  </div>
+</section>
+<div class="ticker" data-layer aria-hidden="true">
+  <div class="ticker-track">
+    <span>vLLM</span><i></i><span>RAG</span><i></i><span>BGE-M3</span><i></i><span>PyTorch</span><i></i><span>ClickHouse</span><i></i><span>FastAPI</span><i></i><span>Gemma</span><i></i><span>Qwen</span><i></i><span>scikit-learn</span><i></i><span>PostgreSQL</span><i></i>
+    <span>vLLM</span><i></i><span>RAG</span><i></i><span>BGE-M3</span><i></i><span>PyTorch</span><i></i><span>ClickHouse</span><i></i><span>FastAPI</span><i></i><span>Gemma</span><i></i><span>Qwen</span><i></i><span>scikit-learn</span><i></i><span>PostgreSQL</span><i></i>
+  </div>
+</div>
+
+<!-- ============ 03 SYSTEMS ============ -->
+<section class="sec wrap" id="systems">
+  <div class="sec-label" data-layer><span><b>// 03.00</b> SEC_SYSTEMS</span><span>INDEX [03 / 06]</span></div>
+  <div class="sys-head">
+    <div>
+      <p class="kicker" data-layer="type">Production AI</p>
+      <h2 data-layer="type">Systems I've shipped</h2>
+    </div>
+    <p class="sys-sub" data-layer="type">Running here as simulations with sample data. Press an example and watch it work.</p>
+  </div>
+
+  <article class="system" data-layer="fill">
+    <div class="sys-meta"><span class="sys-id">SYS_01</span><span>RAG assistant</span><span class="dim">Bookme.pk</span></div>
+    <h3>Bookie: an internal RAG assistant</h3>
+    <p>Teams ask questions in plain language and get answers drawn from company content, with the sources shown. Built on BGE-M3 embeddings.</p>
+    <ul class="chips sm"><li>RAG</li><li>BGE-M3</li><li>Embeddings</li><li>Python</li></ul>
+    <div class="demo" data-demo="rag"></div>
+    <details class="hood"><summary>Under the hood</summary>
+      <p>Documents are split into chunks and embedded with BGE-M3. A question is embedded the same way, the closest chunks are retrieved and handed to the LLM with an instruction to answer only from them and to cite them. If nothing relevant comes back, it says so instead of guessing.</p>
+    </details>
+  </article>
+
+  <article class="system" data-layer="fill">
+    <div class="sys-meta"><span class="sys-id">SYS_02</span><span>Predictive ML</span><span class="dim">Bookme.pk</span></div>
+    <h3>Flight price direction &amp; delay prediction</h3>
+    <p>Classification models trained on 47,000+ historical flight records, with feature engineering and evaluation on accuracy, F1-score and confusion matrices.</p>
+    <ul class="chips sm"><li>scikit-learn</li><li>Pandas</li><li>Feature engineering</li><li>F1 / AUC</li></ul>
+    <div class="demo" data-demo="fare"></div>
+    <details class="hood"><summary>Under the hood</summary>
+      <p>Each flight leg becomes a row of features (days to departure, weekday, recent fare movement, route and season signals). A classifier predicts whether the fare will rise, stay flat or drop, and is judged on held-out data with F1 and a confusion matrix, not just accuracy.</p>
+    </details>
+  </article>
+
+  <article class="system" data-layer="fill">
+    <div class="sys-meta"><span class="sys-id">SYS_03</span><span>LLM serving</span><span class="dim">Bookme.pk</span></div>
+    <h3>Open-weight LLMs on our own GPUs</h3>
+    <p>Gemma and Qwen served with vLLM on local GPU infrastructure, behind OpenAI-compatible REST APIs that internal AI apps call.</p>
+    <ul class="chips sm"><li>vLLM</li><li>Gemma</li><li>Qwen</li><li>Linux</li><li>REST APIs</li></ul>
+    <div class="demo" data-demo="serve"></div>
+    <details class="hood"><summary>Under the hood</summary>
+      <p>vLLM batches concurrent requests on the GPU and streams tokens back as they are generated. Because the API is OpenAI-compatible, an internal app can switch between models by changing one field.</p>
+    </details>
+  </article>
+
+  <article class="system" data-layer="fill">
+    <div class="sys-meta"><span class="sys-id">SYS_04</span><span>AI automation</span><span class="dim">In daily use</span></div>
+    <h3>AI scrum meeting automation</h3>
+    <p>Records a stand-up, transcribes it, works out who spoke when, and has an LLM write a structured summary plus a personal update for each person.</p>
+    <ul class="chips sm"><li>Speech-to-text</li><li>Speaker diarization</li><li>LLM APIs</li><li>Linux</li></ul>
+    <div class="demo" data-demo="scrum"></div>
+    <details class="hood"><summary>Under the hood</summary>
+      <p>Audio goes through speech-to-text, then speaker diarization splits the transcript by voice. An LLM turns each person's lines into a structured update (done, next, blockers) with a fixed output schema.</p>
+    </details>
+  </article>
+  <noscript><p class="sys-sub">The demos need JavaScript.</p></noscript>
+</section>
+
+<!-- ============ 04 PROJECTS ============ -->
+<section class="sec wrap" id="lab">
+  <div class="sec-label" data-layer><span><b>// 04.00</b> SEC_PROJECTS</span><span>INDEX [04 / 06]</span></div>
+  <div class="sys-head">
+    <div>
+      <p class="kicker" data-layer="type">Builds · pipelines · research</p>
+      <h2 data-layer="type">The project matrix</h2>
+    </div>
+    <p class="sys-sub" data-layer="type">Side builds, pipelines and the research that came before.</p>
+  </div>
+  <div class="filters" data-layer role="group" aria-label="Filter projects">
+    <button type="button" class="is-on" data-filter="all">All <span>4</span></button>
+    <button type="button" data-filter="ai">AI &amp; ML <span>2</span></button>
+    <button type="button" data-filter="data">Data &amp; infra <span>2</span></button>
+  </div>
+  <div class="matrix">
+    <article class="proj" data-cat="ai" data-layer="fill">
+      <div class="proj-top"><span class="tag">AI automation</span><span class="kind">In use</span></div>
+      <h3>AI Scrum Meeting Automation</h3>
+      <p>Transcribes stand-ups, separates speakers and writes structured summaries and per-person updates.</p>
+      <ul class="chips sm"><li>Python</li><li>Speech-to-text</li><li>Diarization</li><li>LLM APIs</li></ul>
+    </article>
+    <article class="proj" data-cat="ai" data-layer="fill">
+      <div class="proj-top"><span class="tag">Health ML</span><span class="kind">Final year project</span></div>
+      <h3>PPG Signal Analysis for Glucose Estimation</h3>
+      <p>TensorFlow regression model estimating blood glucose from PPG sensor signals, served through a cloud backend API.</p>
+      <ul class="chips sm"><li>TensorFlow</li><li>Signal processing</li><li>Feature engineering</li></ul>
+    </article>
+    <article class="proj" data-cat="data" data-layer="fill">
+      <div class="proj-top"><span class="tag">Architecture</span><span class="kind">Bookme.pk</span></div>
+      <h3>Customer Behaviour Intelligence</h3>
+      <p>ClickHouse-based design for semantic retrieval and agentic AI workflows, integrating BGE-M3 embedding models.</p>
+      <ul class="chips sm"><li>ClickHouse</li><li>BGE-M3</li><li>Agentic AI</li></ul>
+    </article>
+    <article class="proj" data-cat="data" data-layer="fill">
+      <div class="proj-top"><span class="tag">Data pipelines</span><span class="kind">Bookme.pk</span></div>
+      <h3>Flight &amp; Motorway Status Pipelines</h3>
+      <p>Scheduled Python pipelines collecting flight and motorway status from REST APIs into PostgreSQL, run by systemd.</p>
+      <ul class="chips sm"><li>Python</li><li>PostgreSQL</li><li>systemd</li><li>REST APIs</li></ul>
+    </article>
+  </div>
+</section>
+
+<!-- ============ 05 EXPERIENCE ============ -->
+<section class="sec wrap" id="log">
+  <div class="sec-label" data-layer><span><b>// 05.00</b> SEC_LOG</span><span>INDEX [05 / 06]</span></div>
+  <p class="kicker" data-layer="type">Experience</p>
+  <h2 data-layer="type">Commit history</h2>
+  <ol class="commits">
+    <li data-layer="fill">
+      <p class="c-date">Jul 2026 → now</p>
+      <div class="c-body">
+        <h3>AI Engineer</h3>
+        <p class="c-org">Bookme.pk · Lahore</p>
+        <p>Self-hosted LLMs, the Bookie RAG assistant, flight price and delay models, behaviour-intelligence architecture and data pipelines (SYS_01–03 above).</p>
+      </div>
+      <span class="c-state live">● Active</span>
+    </li>
+    <li data-layer="fill">
+      <p class="c-date">Apr 2025 → Jul 2025</p>
+      <div class="c-body">
+        <h3>Software Engineer, Python &amp; AI</h3>
+        <p class="c-org">HomeEasy · Remote · Contract</p>
+        <p>Async Python/FastAPI services with OpenAI and Anthropic APIs to process lead data at scale; Streamlit dashboards, Playwright test suites and GitHub Actions CI/CD that cut manual QA by 40%.</p>
+      </div>
+      <span class="c-state">Merged</span>
+    </li>
+    <li data-layer="fill">
+      <p class="c-date">2022 → 2026</p>
+      <div class="c-body">
+        <h3>President &amp; Founder, ACE</h3>
+        <p class="c-org">Ambassadors of Computer Engineering · COMSATS Lahore</p>
+        <p>Founded and led a 100+ member engineering society; organised technical workshops and mentored junior engineers.</p>
+      </div>
+      <span class="c-state">Merged</span>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ 06 CONTACT ============ -->
+<section class="sec wrap contact" id="contact">
+  <div class="sec-label" data-layer><span><b>// 06.00</b> SEC_CONTACT</span><span>INDEX [06 / 06]</span></div>
+  <p class="kicker center" data-layer="type">Open channel</p>
+  <h2 class="big" data-layer="type">Let's put a model into production.</h2>
+  <p class="contact-sub" data-layer="type">Building with LLMs, retrieval or predictive ML? Let's talk.</p>
+  <div class="contact-cta" data-layer>
+    <a class="mailbox" href="mailto:junaidzaheer2311@gmail.com"><i>✉</i>junaidzaheer2311@gmail.com</a>
+    <a class="btn btn-solid" href="assets/Junaid-Zaheer-Resume.pdf" target="_blank" rel="noopener">View résumé ↗</a>
+  </div>
+  <ul class="socials center" data-layer>
+    <li><a href="https://linkedin.com/in/junaid-zaheer" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+    <li><a href="https://github.com/Junii-2311" target="_blank" rel="noopener">GitHub ↗</a></li>
+  </ul>
+</section>
+</main>
+
+<footer class="foot wrap">
+  <span>© <span id="yr">2026</span> Junaid Zaheer</span>
+  <span>Assembled live by an agent swarm · plain HTML, CSS &amp; JS</span>
+  <button type="button" class="replay" id="replay">↻ Replay build</button>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
