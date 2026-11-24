@@ -1,6 +1,6 @@
 /* =========================================================
    Junaid Zaheer — portfolio script
-   1. helpers   2. nav   3. giant word   4. agent swarm
+   1. helpers   2. nav + theme   3. giant word   4. agent swarm
    5. project filter   6. demos
    ========================================================= */
 (() => {
@@ -44,6 +44,38 @@
   panel.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !panel.hidden) { setMenu(false); menuBtn.focus(); } });
   document.addEventListener('click', (e) => { if (!panel.hidden && !nav.contains(e.target)) setMenu(false); });
+  // Colour theme: midnight (navy/teal) -> daylight (light) -> signal (the original red/black).
+  const THEMES = {
+    midnight: { label: 'Midnight', bg: '#0b1120', mark: '%232dd4bf', ink: '%23042f2e' },
+    daylight: { label: 'Daylight', bg: '#f6f7f9', mark: '%230f766e', ink: 'white' },
+    signal:   { label: 'Signal',   bg: '#0a0a0b', mark: '%23ff2d2d', ink: 'white' },
+  };
+  const ORDER = Object.keys(THEMES);
+  const themeBtn = $('#themeBtn');
+  const themeMeta = $('meta[name="theme-color"]');
+  const favicon = $('link[rel="icon"]');
+  const themeNow = () => (THEMES[root.dataset.theme] ? root.dataset.theme : 'signal');
+  function applyTheme(name, animate) {
+    if (animate) {
+      root.classList.add('theme-fade');
+      clearTimeout(applyTheme.t);
+      applyTheme.t = setTimeout(() => root.classList.remove('theme-fade'), 520);
+    }
+    root.dataset.theme = name;
+    const t = THEMES[name];
+    const next = THEMES[ORDER[(ORDER.indexOf(name) + 1) % ORDER.length]].label;
+    themeBtn.setAttribute('aria-label', `Colour theme: ${t.label}. Switch to ${next}.`);
+    themeBtn.title = `Theme: ${t.label} (click for ${next})`;
+    themeMeta.content = t.bg;
+    favicon.href = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='${t.mark}'/%3E%3Ctext x='32' y='42' font-family='monospace' font-weight='700' font-size='26' text-anchor='middle' fill='${t.ink}'%3EJZ%3C/text%3E%3C/svg%3E`;
+  }
+  applyTheme(themeNow(), false);
+  themeBtn.addEventListener('click', () => {
+    const name = ORDER[(ORDER.indexOf(themeNow()) + 1) % ORDER.length];
+    applyTheme(name, !reduced);
+    try { localStorage.setItem('jz-theme', name); } catch (e) { /* private mode: choice lasts this visit only */ }
+  });
+
   const onScroll = () => nav.classList.toggle('is-scrolled', scrollY > 24);
   addEventListener('scroll', onScroll, { passive: true });
   onScroll();
@@ -245,7 +277,7 @@
     function hexOf(el) {
       const target = el.matches('.name') ? el.firstElementChild : el;
       const m = getComputedStyle(target).backgroundColor.match(/\d+(\.\d+)?/g);
-      if (!m || (m.length === 4 && +m[3] === 0)) return '#FF2D2D';
+      if (!m || (m.length === 4 && +m[3] === 0)) return getComputedStyle(root).getPropertyValue('--accent').trim().toUpperCase();
       return `#${m.slice(0, 3).map((v) => (+v).toString(16).padStart(2, '0')).join('').toUpperCase()}`;
     }
 
@@ -307,7 +339,7 @@
       }
     }
 
-    // One agent switches the page from the grey draft canvas to the dark theme.
+    // One agent switches the page from the grey draft canvas to the chosen theme.
     async function themeSwitch() {
       themed = true;
       const a = agents.find((x) => !x.busy) || agents[0];
@@ -317,7 +349,8 @@
         setTask(a, 'theme');
         const r = docRect(nav);
         await moveTo(a, r.x + r.w / 2, r.y + r.h + 18);
-        const chip = overlay('chipbadge', '<i style="background:#0A0A0B"></i>theme: dark · --bg #0A0A0B');
+        const t = THEMES[themeNow()];
+        const chip = overlay('chipbadge', `<i style="background:${t.bg}"></i>theme: ${t.label.toLowerCase()} · --bg ${t.bg.toUpperCase()}`);
         place(chip, a.x + 16, a.y + 4);
         await new Promise((res) => setTimeout(res, 550));
         root.classList.remove('draft');
@@ -573,7 +606,7 @@
     ui.stage.innerHTML = `<div class="fare-grid">
       <div>${ex.feats.map(([n, v]) => `<div class="feat"><span>${esc(n)}</span><span class="bar"><i></i></span><b>${esc(v)}</b></div>`).join('')}</div>
       <div><svg class="spark" viewBox="0 0 300 110" preserveAspectRatio="none" aria-hidden="true">
-        <defs><linearGradient id="sparkFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff2d2d" stop-opacity=".25"/><stop offset="1" stop-color="#ff2d2d" stop-opacity="0"/></linearGradient></defs>
+        <defs><linearGradient id="sparkFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--accent)" stop-opacity=".25"/><stop offset="1" style="stop-color:var(--accent)" stop-opacity="0"/></linearGradient></defs>
         <path class="area" d="${p.area}"/><path class="line" d="${p.line}"/><text x="8" y="108">last 10 days · fare index</text></svg>
         <div class="verdict-box"></div></div></div>`;
     ui.setStep(0); ui.working('Building features for this flight…');
